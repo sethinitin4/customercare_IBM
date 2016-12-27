@@ -1,16 +1,37 @@
+{%load static%}
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Bluemix | CustomerCare</title>
+    <link rel="stylesheet" type="text/css" href="{%static 'css/app/style.css'%}">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Abel|Athiti|Josefin+Sans|Open+Sans+Condensed:300|PT+Sans+Narrow|Quicksand|Teko" rel="stylesheet">
+
 </head>
 <body>
-
+<header class="header">
+        <div class="col-md-1 sub-container" id="sub-container-tab0">
+            <img src="{%static 'img/bluemix.png'%}" alt="logo" height="80%">
+        </div>
+        <div class="col-md-2 sub-container" id="sub-container-tab1"><h3>IBM Bluemix</h3></div>
+        <div class="col-md-4 sub-container pull-right row">
+            <a href="{%url 'logout'%}"><div class="sub-sub-container col-md-6"><p>Logout</p></div></a>
+        </div>
+</header>
 
 <div>
     <div>
         <font size="6">Kindly fill out your complaint specifics</font><br>
     </div>
-    <div><a href="{%url 'logout'%}">Logout</a></div>
     <form action="/complaint" method="post">{%csrf_token%}
         <h4>Describe the problem<br></h4>
         <input type="text" value=" " name="description"><br><br><br>
