@@ -10,19 +10,19 @@
     <div>
         <font size="6">Kindly fill out your complaint specifics</font><br>
     </div>
-
-    <form action="/complaint" method="post">
+    <div><a href="{%url 'logout'%}">Logout</a></div>
+    <form action="/complaint" method="post">{%csrf_token%}
         <h4>Describe the problem<br></h4>
-        <input type="text" value=" "><br><br><br>
+        <input type="text" value=" " name="description"><br><br><br>
         <h4>State the urgency <br></h4><br>
-        <input type="radio" name="urgency"
-               value="Need immediate solution(short term), work on long term solution required"> Need immediate
+        <input type="radio"
+               value="Need immediate solution(short term), work on long term solution required" name="type"> Need immediate
         solution(short term), work on long term solution required<br><br>
-        <input type="radio" name="urgency" value="Need immediate long term solution"> Need immediate long term
+        <input type="radio" value="Need immediate long term solution" name="type"> Need immediate long term
         solution<br><br>
-        <input type="radio" name="urgency" value="New solution, need thorough time flexible effecient solution"> New
+        <input type="radio" value="New solution, need thorough time flexible effecient solution" name="type" /> New
         solution, need thorough time flexible effecient solution<br><br>
-        <input type="submit" value="submit" />
+        <input type="submit" value="Submit" />
     </form>
 </div>
 </body>
