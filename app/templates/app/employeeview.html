@@ -1,0 +1,7 @@
+{%for complaint in complaints%}
+    <h1>{{complaint.type}}</h1>
+    <p>{{complaint.description}}</p>
+    <p>{{complaint.user.username}}</p>
+{%empty%}
+    <h1>There are no complaints to show</h1>
+{%endfor%}
