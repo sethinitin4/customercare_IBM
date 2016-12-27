@@ -24,27 +24,12 @@
         </div>
         <div class="col-md-2 sub-container" id="sub-container-tab1"><h3>IBM Bluemix</h3></div>
         <div class="col-md-4 sub-container pull-right row">
-            <a href="{%url 'logout'%}"><div class="sub-sub-container col-md-6"><p>Logout</p></div></a>
+            <a href="{%url 'index'%}"><div class="sub-sub-container col-md-6"><p>Customer Login</p></div></a>
+            <a href="{%url 'login'%}"><div class="sub-sub-container col-md-6"><p>Employee Login</p></div></a>
         </div>
 </header>
-
-<div>
-    <div>
-        <font size="6">Kindly fill out your complaint specifics</font><br>
+    <div class="main-body">
+    <h1>Your Complaint has been successfully files. We will get back to you as soon as possible.</h1>
     </div>
-    <form action="/complaint" method="post">{%csrf_token%}
-        <h4>Describe the problem<br></h4>
-        <input type="text" value=" " name="description"><br><br><br>
-        <h4>State the urgency <br></h4><br>
-        <input type="radio"
-               value="Need immediate solution(short term), work on long term solution required" name="type"> Need immediate
-        solution(short term), work on long term solution required<br><br>
-        <input type="radio" value="Need immediate long term solution" name="type"> Need immediate long term
-        solution<br><br>
-        <input type="radio" value="New solution, need thorough time flexible effecient solution" name="type" /> New
-        solution, need thorough time flexible effecient solution<br><br>
-        <input type="submit" value="Submit" />
-    </form>
-</div>
 </body>
 </html>
