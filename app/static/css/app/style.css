@@ -1,0 +1,72 @@
+*{
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+/*NAVBAR CSS*/
+header{
+    background-color: #132024;
+    height:6vh;
+    width:100%;
+}
+.sub-container{
+    transition: background-color 0.6s ease;
+    height: 6vh;
+    color:#FFFFFF;
+    font-weight: lighter;
+}
+.sub-container h3{
+    padding:0;
+    margin:5% 0 0 0;
+    font-weight:lighter;
+}
+.sub-container img{
+    margin:4px 0 0 70%;
+}
+.sub-sub-container{
+    font-family: 'Athiti' , Serif;
+    height:80%;
+    color:white;
+    text-align: center;
+    margin-top:1%;
+    font-weight:bold;
+}
+.sub-sub-container p{
+    margin-top:14px;
+}
+.sub-sub-container:hover{
+    cursor: pointer;
+    color:#2699BF;
+}
+.active{
+    color:#2699BF;
+}
+/*NAVBAR CSS*/
+/*MAIN BODY CSS*/
+.main-body{
+    width: 60%;
+    height: 60vh;
+    margin: 5% auto;
+    text-align: center;
+}
+.main-body-container{
+    margin:6% auto;
+    width:60%;
+    font-size:1.3em;
+    text-align: left;
+}
+.main-body-container input{
+    font-size: 1.4em;
+    background-color: #F0F2F2;
+    border:1px solid black;
+    width:90%;
+}
+.submit-button input{
+    color:white;
+    font-size:1.2em;
+    background-color:#132024; 
+}
+/*MAIN BODY CSS*/
