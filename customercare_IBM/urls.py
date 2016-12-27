@@ -19,6 +19,12 @@ from app import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.index),
-    url(r'complaint', views.complaint)
+    url(r'^$', views.index, name="index"),
+    url(r'^complaint', views.complaint, name="complaint"),
+    url(r'^success', views.success),
+    url(r'^failure', views.failure),
+    url(r'^logout', views.Logout, name="logout"),
+    url(r'^login', views.Login, name="login"),
+    url(r'^viewcomplaints', views.viewcomplaints, name="viewcomplaints"),
+    url(r'^logoutemployee', views.LogoutEmployee, name="logoutemployee")
 ]
