@@ -82,3 +82,19 @@ header{
     background-color: white;
 }
 /*COMPLAINT CSS*/
+/*VIEW-COMPLAINT CSS*/
+.view-complaint-container{
+    height:85vh;
+overflow:scroll;
+text-align:center;
+}
+.view-complaint-sub-container{
+    margin-top:1%;
+    border-radius: 10px;
+    border:1px solid #3d70b2;
+}
+.turn-blue{
+    color:#3d70b2;
+    font-weight: bold;
+}
+/*VIEW-COMPLAINT CSS*/
