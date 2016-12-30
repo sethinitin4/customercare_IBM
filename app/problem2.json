@@ -1,0 +1,43 @@
+  {
+    "subject": "complaints",
+    "columns": [{
+        "key": "share",
+        "type": "numeric",
+        "goal": "max",
+        "is_objective": true,
+        "full_name": "Share",
+        "range": {
+          "low": 0,
+          "high": 10
+        },
+        "format": "number:2"
+      },
+
+      {
+        "key": "urgency",
+        "type": "categorical",
+        "goal": "min",
+        "is_objective": true,
+        "full_name": "Urgency",
+        "range": [
+          "Very",
+          "Mod",
+          "Not"
+        ],
+        "preference": [
+          "Very",
+          "Mod",
+          "Not"
+        ]
+      }, {
+        "key": "aDate",
+        "type": "datetime",
+        "goal": "min",
+        "is_objective": true,
+        "full_name": "Association Date",
+        "format": "date: 'MMM dd, yyyy'"
+      }
+    ],
+    "options": [
+    ]
+  }

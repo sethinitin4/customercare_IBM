@@ -10,9 +10,6 @@ class User(models.Model):
 	def __unicode__(self):
 		return self.username
 
-	def __unicode__(self):
-		return "<User %s>"%username
-
 class Complaint(models.Model):
 	user = models.ForeignKey(
 		'User'
@@ -22,7 +19,3 @@ class Complaint(models.Model):
 
 	def __unicode__(self):
 		return self.type
-
-
-	def __unicode__(self):
-		return "<Type %s>"%type
