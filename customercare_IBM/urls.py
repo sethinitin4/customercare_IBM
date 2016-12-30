@@ -23,8 +23,7 @@ urlpatterns = [
     url(r'^complaint', views.complaint, name="complaint"),
     url(r'^success', views.success),
     url(r'^failure', views.failure),
+    url(r'^logoutemployee', views.LogoutEmployee, name="logoutemployee"),
     url(r'^logout', views.Logout, name="logout"),
     url(r'^login', views.Login, name="login"),
-    url(r'^viewcomplaints', views.viewcomplaints, name="viewcomplaints"),
-    url(r'^logoutemployee', views.LogoutEmployee, name="logoutemployee")
-]
+    url(r'^viewcomplaints', views.viewcomplaints, name="viewcomplaints"),]

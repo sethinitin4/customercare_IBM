@@ -71,7 +71,7 @@ def Login(request):
 
 @login_required(login_url='/login')
 def LogoutEmployee(request):
-    logout(request, user)
+    logout(request)
     return redirect('/login')
 
 @login_required(login_url='/login')
