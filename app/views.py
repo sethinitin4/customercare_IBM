@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from app.models import User, Complaint
+import json
+from django.http import JsonResponse
+import watson_developer_cloud
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 
@@ -77,4 +80,12 @@ def LogoutEmployee(request):
 @login_required(login_url='/login')
 def viewcomplaints(request):
     complaints = Complaint.objects.all()
-    return render(request, 'app/employeeview.html', {'complaints':complaints})
+    tradeoff_analytics = watson_developer_cloud.TradeoffAnalyticsV1(username='8c818e92-ce0e-40e4-8e5f-20ab9b839f1f',password='PFfXrQRiMAUY')
+    file = open('app/problem2.json')
+    k = json.load(file)
+    i=0
+    for complaint in complaints:
+        i=i+1
+        k['options'].append({'key':i, 'name':complaint.user.username, 'values':{'shares':complaint.user.shares, 'urgency':complaint.type, 'aDate':str(complaint.user.reg_data)+"T00:00:00Z"}})
+    dilemma = tradeoff_analytics.dilemmas(k),
+    return JsonResponse(dilemma)
