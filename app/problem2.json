@@ -8,7 +8,7 @@
         "full_name": "Share",
         "range": {
           "low": 0,
-          "high": 10
+          "high": 100
         },
         "format": "number:2"
       },

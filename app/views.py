@@ -84,8 +84,20 @@ def viewcomplaints(request):
     file = open('app/problem2.json')
     k = json.load(file)
     i=0
+    obj=[]
     for complaint in complaints:
+        obj.append(complaint)
+        k['options'].append({'key':i, 'name':complaint.user.username, 'values':{'share':complaint.user.shares, 'urgency':complaint.type, 'aDate':str(complaint.user.reg_data)+"T00:00:00Z"}})
         i=i+1
-        k['options'].append({'key':i, 'name':complaint.user.username, 'values':{'shares':complaint.user.shares, 'urgency':complaint.type, 'aDate':str(complaint.user.reg_data)+"T00:00:00Z"}})
-    dilemma = tradeoff_analytics.dilemmas(k),
-    return JsonResponse(dilemma)
+    dilemma = tradeoff_analytics.dilemmas(k, generate_visualization=False)
+    obj1 = []
+    obj2 = []
+    for s in dilemma['resolution']['solutions']:
+        complaint = obj[int(s['solution_ref'])]
+        if s['status']=='EXCLUDED':
+            obj1.append({'complaint':complaint})
+        elif s['status']=='FRONT' :
+            obj2.append({'complaint':complaint})
+        else:
+            return redirect('/failure')
+    return render(request,'app/employeeview.html',{'complaints_red': obj2, 'complaints_blue': obj1})

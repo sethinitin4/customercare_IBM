@@ -29,12 +29,18 @@
 </header>
     <h1 style="text-align:center">Complaints:</h1>
 <div class="view-complaint-container container">
-    {%for complaint in complaints%}
+    {%for complaint in complaints_red%}
+        <div class="view-complaint-sub-container" style="border:solid 2px red">
+            <h4><span class="turn-blue">Description:</span></h4>
+            <p>{{complaint.complaint.description}}</p>
+            <h4><span class="turn-blue">Complaint lodged by:</span>{{complaint.complaint.user.username}}</h4>
+        </div>
+    {%endfor%}
+    {%for complaint in complaints_blue%}
         <div class="view-complaint-sub-container">
-            <h2><span class="turn-blue">TYPE:</span> {{complaint.type}}</h2>
-            <h2><span class="turn-blue">Description:</span></h2>
-            <p>{{complaint.description}}</p>
-            <h4><span class="turn-blue">Complaint lodged by:</span>{{complaint.user.username}}</h4>
+            <h4><span class="turn-blue">Description:</span></h4>
+            <p>{{complaint.complaint.description}}</p>
+            <h4><span class="turn-blue">Complaint lodged by:</span>{{complaint.complaint.user.username}}</h4>
         </div>
     {%endfor%}
 </div>
