@@ -1,0 +1,15 @@
+cffi==1.7.0
+cryptography==1.4
+Django==1.9.3
+django-extensions==1.6.7
+django-markdown==0.8.4
+Fabric==1.10.2
+idna==2.1
+Markdown==2.6.7
+paramiko==2.0.2
+pyasn1==0.1.9
+pycparser==2.14
+pysolr==3.6.0
+requests==2.12.4
+six==1.10.0
+watson-developer-cloud==0.23.0
