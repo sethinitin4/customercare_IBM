@@ -4,6 +4,7 @@ A customer care app for IBM which help in priority sorting of complaints recieve
 ### Prerequisites
 > Django  
 > Watson Developer Cloud  
+> service credentials are to be inserted in testingapi.py, toneanalyzer.api
 **NOTE: To use the app one must have a bluemix account and access to the apis**
 
 ## How does the app work?
@@ -32,7 +33,12 @@ A customer care app for IBM which help in priority sorting of complaints recieve
 * Goto to the employee login and login with the super user and look at the sorted complaints.
 
 ## Feature of the App and further development
-Add features and further development plans here
+The current version deals with objective parmaters and queries.
+
+Further development is to be done using the tone analyzer for subjective queries which returns emotional raings.
+Parameters like sadness and anger are minimized and others like happiness are maximized.
+
+Other Features like instant results using Retrieve and Rank API and assigning personalized support by choosing tne right employee using Personality Insights API can be added.
 
 ## API USAGE
 Put api usage here
@@ -40,3 +46,4 @@ Put api usage here
 ## Author
 Nitin Sethi  
 [Github](https://www.github.com/setin666)
+[E-Mail](nitinsethi.iitr@gmail.com)
