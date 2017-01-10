@@ -80,8 +80,7 @@ def LogoutEmployee(request):
 @login_required(login_url='/login')
 def viewcomplaints(request):
     complaints = Complaint.objects.all()
-    tradeoff_analytics = watson_developer_cloud.TradeoffAnalyticsV1(username='8c818e92-ce0e-40e4-8e5f-20ab9b839f1f',password='PFfXrQRiMAUY')
-    file = open('app/problem2.json')
+tradeoff_analytics = watson_developer_cloud.TradeoffAnalyticsV1(username='service credentials - username',password='service credentials - password')    file = open('app/problem2.json')
     k = json.load(file)
     i=0
     obj=[]
