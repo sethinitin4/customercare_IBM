@@ -20,6 +20,7 @@ A customer care app for IBM which help in priority sorting of complaints recieve
 * Clone the project into your home folder.
 * Go into the root of the project and open the terminal.
 * In root run ```pip install -r requirements.txt```
+* replace service credentials (as in prerequisites).
 * In root run ```python manage.py migrate```
 * In root run ```python manage.py createsuperuser``` and follow the instructions that follow
 * In root run ```python manage.py runserver```
@@ -41,7 +42,8 @@ Parameters like sadness and anger are minimized and others like happiness are ma
 Other Features like instant results using Retrieve and Rank API and assigning personalized support by choosing tne right employee using Personality Insights API can be added.
 
 ## API USAGE
-Put api usage here
+API general use can be seen in files api.y, testingapi.py and toneanalyzer.py.
+Tutorials and API references can be seen in API documentation at Bluemix account.
 
 ## Author
 Nitin Sethi  
