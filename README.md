@@ -4,7 +4,7 @@ A customer care app for IBM which help in priority sorting of complaints recieve
 ### Prerequisites
 > Django  
 > Watson Developer Cloud  
-> service credentials are to be inserted in testingapi.py, toneanalyzer.api
+> service credentials are to be inserted in testingapi.py, toneanalyzer.api, app/views.py
 **NOTE: To use the app one must have a bluemix account and access to the apis**
 
 ## How does the app work?
