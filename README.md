@@ -48,4 +48,4 @@ Tutorials and API references can be seen in API documentation at Bluemix account
 ## Author
 Nitin Sethi  
 [Github](https://www.github.com/setin666)
-[E-Mail](nitinsethi.iitr@gmail.com)
+
